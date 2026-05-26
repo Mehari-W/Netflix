@@ -1,0 +1,40 @@
+/* App.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141414; 
+  color: #e5e5e5; 
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow-x: hidden; 
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.App {
+  min-height: 100vh;
+}
+
+/* ------------------------------------------------ */
+scroll bar
+/* ------------------------------------------------ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}

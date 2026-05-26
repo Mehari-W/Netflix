@@ -1,0 +1,101 @@
+/* 1. Main Header Container */
+.header-outer-container {
+  position: fixed; /* 'fixed' lets it float over your movie banner! */
+  top: 0;
+  width: 100%;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.4s ease-in-out; /* Smooth fade effect */
+  z-index: 1000;
+  /* Starts transparent with a slight dark gradient at the top */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+}
+
+/* 2. The Dark Class (Triggered when scrolling) */
+.header-outer-container.dark {
+  background-color: #141414;
+  background-image: none;
+}
+
+/* 3. Inner Container */
+.header-container {
+  width: 100%;
+  padding: 0 4%; /* Classic Netflix side padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 4. Left Navigation Styles */
+.header-left ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-left img {
+  width: 92.5px; /* Exact Netflix logo width */
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.header-left ul li {
+  color: #e5e5e5;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.4s;
+}
+
+.header-left ul li:hover {
+  color: #b3b3b3;
+}
+
+/* The active page (e.g., Home) is usually bolder and bright white */
+.header-left ul li.active {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* 5. Right Navigation Styles */
+.header-right ul {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-right ul li {
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* 6. Profile Avatar & Dropdown Hover Effect */
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.profile-icon {
+  font-size: 1.8rem;
+  border-radius: 4px;
+}
+
+.dropdown-arrow {
+  font-size: 1rem;
+  transition: transform 0.3s ease; /* Makes the arrow spin */
+}
+
+/* Spin the arrow upside down when hovering over the profile area */
+.header-right ul li.profile-container:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}

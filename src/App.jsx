@@ -1,12 +1,12 @@
 import "./App.css";
+import Home from "./pages/Home.jsx";
 
 function App() {
   return (
     <>
-      <h1>Netflix Cloned Here</h1>
+      <Home />
     </>
   );
 }
 
 export default App;
-
