@@ -1,0 +1,98 @@
+/* Container Styling */
+.footer_outer_container {
+  background-color: #141414; /* Standard Netflix dark background */
+  color: #808080; /* Netflix grey text */
+  padding: 50px 0; 
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.footer_inner_container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 4%; /* Keeps it from touching the edges on smaller screens */
+}
+
+/* Social Icons */
+.footer-icons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon-spacing {
+  color: white;
+  font-size: 26px; /* Sizing the react-icons */
+  margin-right: 25px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.icon-spacing:hover {
+  color: #b3b3b3;
+}
+
+/* 4-Column Link Grid */
+.footer_data {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.footer_data ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_data li {
+  margin-bottom: 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.footer_data li:hover {
+  text-decoration: underline; /* Netflix underlines links on hover */
+}
+
+/* Service Code Button */
+.service_code {
+  margin-bottom: 20px;
+}
+
+.service_code p {
+  display: inline-block;
+  padding: 6px 1em; /* Box padding */
+  border: 1px solid #808080; /* Thin grey border */
+  font-size: 13px;
+  cursor: pointer;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.service_code p:hover {
+  color: white; /* Optional: lightens text on hover */
+}
+
+/* Copyright Text */
+.copy-write {
+  font-size: 11px;
+  color: #808080;
+  margin-top: 20px;
+}
+
+/* --- Responsive Adjustments --- */
+@media screen and (max-width: 768px) {
+  .footer_data {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer_data {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+  .icon-spacing {
+    font-size: 22px;
+  }
+}

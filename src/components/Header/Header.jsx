@@ -1,21 +1,21 @@
-import React from "react";
-import styles from "./Header.module.css";
-import logo from "../assets/NetflixLogo.png";
+// import React from "react";
+import logo from "../../assets/Images/NetflixLogo.png";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { MdOutlineAccountBox } from "react-icons/md";
 import { IoMdArrowDropdownCircle } from "react-icons/io";
+import styles from "./Header.module.css";
 const HEADER = () => {
   return (
-    <div>
-      <div className={styles["header-outer-container"]}>
-        <div className={styles["header-container"]}>
-          <div className={styles["header-left"]}>
+    <>
+      <div className={styles["header_outer_container"]}>
+        <div className={styles["header_container"]}>
+          <div className={styles["header_left"]}>
             <ul>
               <li>
                 <img src={logo} alt="Netflix logo image" />
               </li>
-              <li>netflix</li>
+              <li>Netflix</li>
               <li>Home</li>
               <li>Tv shows</li>
               <li>Movies</li>
@@ -24,8 +24,7 @@ const HEADER = () => {
               <li>Browse by Language</li>
             </ul>
           </div>
-          <div className={styles["header-right"]}>
-            {" "}
+          <div className={styles["header_right"]}>
             <ul>
               <li>
                 <IoSearchOutline />
@@ -43,8 +42,8 @@ const HEADER = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </>
+  )
 };
 
 export default HEADER;
