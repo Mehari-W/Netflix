@@ -1,18 +1,22 @@
-// import React from 'react'
-import { FaFacebook } from "react-icons/fa";
-import { FaSquareInstagram } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaYoutube } from "react-icons/fa";
+import { FaSquareInstagram, FaXTwitter } from "react-icons/fa6"; // Added modern X/Twitter icon
 import styles from "./Footer.module.css";
+
 const Footer = () => {
   return (
-    <div className={styles["footer_outer_container"]}>
-      <div className={styles["footer_inner_container"]}>
-        <div className={styles["footer-icons"]}>
-          <FaFacebook className={styles["icon-spacing"]} />
-          <FaSquareInstagram className={styles["icon-spacing"]} />
-          <FaYoutube className={styles["icon-spacing"]} />
+    <div className={styles.footer_outer_container}>
+      <div className={styles.footer_inner_container}>
+        
+        {/* Social Media Icons */}
+        <div className={styles.footer_icons}>
+          <FaFacebook className={styles.icon_spacing} />
+          <FaSquareInstagram className={styles.icon_spacing} />
+          <FaXTwitter className={styles.icon_spacing} /> {/* Added X */}
+          <FaYoutube className={styles.icon_spacing} />
         </div>
-        <div className={styles["footer_data"]}>
+
+        {/* 4-Column Data Links */}
+        <div className={styles.footer_data}>
           <div>
             <ul>
               <li>Audio Description</li>
@@ -38,14 +42,21 @@ const Footer = () => {
             <ul>
               <li>Media Center</li>
               <li>Privacy</li>
+              <li>Ad Choices</li> {/* Added for modern Ad-tier compliance */}
               <li>Contact Us</li>
             </ul>
           </div>
         </div>
-        <div className={styles["service_code"]}>
+
+        {/* Service Button & Copyright */}
+        <div className={styles.service_code}>
           <p>Service Code</p>
         </div>
-        <div className={styles["copy-write"]}>&copy; 1997-2024 Netflix, Inc.</div>
+        
+        <div className={styles.copy_write}>
+          &copy; 1997-2026 Netflix, Inc. {/* Updated to 2026 */}
+        </div>
+        
       </div>
     </div>
   );

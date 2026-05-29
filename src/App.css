@@ -1,40 +1,46 @@
-/* App.css */
-
+/* 1. Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* 2. Base Body Styling (Modern Netflix Standard) */
 body {
-  background-color: #141414; 
-  color: #e5e5e5; 
+  background-color: #141414;
+  color: #e5e5e5;
+  /* 'Netflix Sans' is their proprietary font, with solid fallbacks */
   font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  overflow-x: hidden; 
+  overflow-x: hidden; /* Prevents horizontal scrolling/wobble */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; /* Added for better Firefox text rendering */
 }
-
 
 .App {
   min-height: 100vh;
 }
 
 /* ------------------------------------------------ */
-scroll bar
+/* Custom Scrollbar Styling */
 /* ------------------------------------------------ */
+
+/* Width of the vertical scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
+/* The track (background) of the scrollbar */
 ::-webkit-scrollbar-track {
   background: #141414;
 }
 
+/* The draggable handle */
 ::-webkit-scrollbar-thumb {
   background: #555;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
+/* Hover effect on the draggable handle */
 ::-webkit-scrollbar-thumb:hover {
   background: #888;
 }
