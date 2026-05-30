@@ -1,5 +1,5 @@
 import { FaFacebook, FaYoutube } from "react-icons/fa";
-import { FaSquareInstagram, FaXTwitter } from "react-icons/fa6"; // Added modern X/Twitter icon
+import { FaSquareInstagram, FaXTwitter } from "react-icons/fa6"; 
 import styles from "./Footer.module.css";
 
 const Footer = () => {
@@ -11,11 +11,10 @@ const Footer = () => {
         <div className={styles.footer_icons}>
           <FaFacebook className={styles.icon_spacing} />
           <FaSquareInstagram className={styles.icon_spacing} />
-          <FaXTwitter className={styles.icon_spacing} /> {/* Added X */}
+          <FaXTwitter className={styles.icon_spacing} /> 
           <FaYoutube className={styles.icon_spacing} />
         </div>
 
-        {/* 4-Column Data Links */}
         <div className={styles.footer_data}>
           <div>
             <ul>
@@ -54,7 +53,7 @@ const Footer = () => {
         </div>
         
         <div className={styles.copy_write}>
-          &copy; 1997-2026 Netflix, Inc. {/* Updated to 2026 */}
+          &copy; 1997-2026 Netflix, Inc. 
         </div>
         
       </div>

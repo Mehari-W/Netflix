@@ -1,18 +1,15 @@
-// import React from "react";
-import Row from "../Row/Row"; // Adjust this path depending on where your Row component sits
-import requests from "../../../api/Requests"; // Adjust this path to where your TMDB fetch URLs are defined
+import Row from "../Row/Row";
+import requests from "../../../api/Requests";
 
 const RowList = () => {
   return (
     <>
-      {/* The main featured row gets the 'isLargeRow' flag for tall vertical posters */}
       <Row
         title="NETFLIX ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
         isLargeRow={true}
       />
-      
-      {/* The rest of the rows default to wide backdrop thumbnails */}
+
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
       <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
       <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
