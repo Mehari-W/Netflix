@@ -1,11 +1,9 @@
-/* Container for the entire row section */
+
 .row {
   margin-left: 20px;
   color: white;
   font-family: Arial, sans-serif;
 }
-
-/* Row Title (e.g., NETFLIX ORIGINALS) */
 .row h2 {
   font-size: 1.4rem;
   font-weight: bold;
@@ -13,42 +11,40 @@
   margin-top: 20px;
 }
 
-/* Flexbox wrapper that makes posters scroll horizontally */
+
 .row__posters {
   display: flex;
   overflow-y: hidden;
-  overflow-x: scroll; /* Enables horizontal scrolling */
+  overflow-x: scroll; 
   padding: 20px 20px 20px 0;
 }
 
-/* Hide the ugly scrollbar track while maintaining the scrolling functionality */
 .row__posters::-webkit-scrollbar {
   display: none; 
 }
 
-/* Base styling for all movie poster thumbnails (Wide Backdrops) */
+
 .row__poster {
   object-fit: contain;
   width: 100%;
-  max-height: 100px; /* Keeps wide backdrops shorter */
+  max-height: 100px;
   margin-right: 10px;
-  transition: transform 450ms ease-in-out; /* Smooth hover animation transition */
+  transition: transform 450ms ease-in-out; 
   cursor: pointer;
   border-radius: 4px;
 }
 
-/* Smooth pop-out zoom effect on hover */
+
 .row__poster:hover {
   transform: scale(1.08);
   opacity: 1;
 }
 
-/* Styling specifically for the large vertical row (Netflix Originals) */
 .row__posterLarge {
-  max-height: 250px; /* Makes the main row posters taller */
+  max-height: 250px; 
 }
 
-/* Slightly more dramatic zoom effect for the larger main posters */
+
 .row__posterLarge:hover {
   transform: scale(1.09);
 }

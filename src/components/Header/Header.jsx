@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import logo from "../../assets/Images/NetflixLogo.png";
+import Netflix_avatar from "../../assets/Images/Netflix_avatar.png";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoMdArrowDropdownCircle } from "react-icons/io";
@@ -8,7 +9,6 @@ import styles from "./Header.module.css";
 const HEADER = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Monitor scroll positioning to toggle the dark background color
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -23,20 +23,18 @@ const HEADER = () => {
   }, []);
 
   return (
-    <div 
+    <div
       className={`${styles.header_outer_container} ${
         isScrolled ? styles.dark : ""
       }`}
     >
       <div className={styles.header_container}>
-        
-        {/* Left Navigation */}
         <div className={styles.header_left}>
           <ul>
             <li>
               <img src={logo} alt="Netflix logo image" />
             </li>
-            <li className={styles.active}>Home</li> {/* Active tab is highlighted white */}
+            <li className={styles.active}>Home</li>
             <li>TV Shows</li>
             <li>Movies</li>
             <li>Games</li>
@@ -44,7 +42,6 @@ const HEADER = () => {
           </ul>
         </div>
 
-        {/* Right Navigation */}
         <div className={styles.header_right}>
           <ul>
             <li>
@@ -54,9 +51,9 @@ const HEADER = () => {
               <IoMdNotificationsOutline />
             </li>
             <li className={styles.profile_container}>
-              <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" 
-                alt="User Profile" 
+              <img
+                src={Netflix_avatar}
+                alt="User Profile"
                 className={styles.profile_icon}
                 style={{ width: "32px", height: "32px", objectFit: "cover" }}
               />
@@ -64,7 +61,6 @@ const HEADER = () => {
             </li>
           </ul>
         </div>
-
       </div>
     </div>
   );

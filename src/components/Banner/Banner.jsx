@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import requests from "../../api/Requests";
 import instance from "../../api/Axios";
-import { FaPlay } from "react-icons/fa"; // Adds the modern Play icon
-import { AiOutlineInfoCircle } from "react-icons/ai"; // Adds the More Info icon
+import { FaPlay } from "react-icons/fa";
+import { AiOutlineInfoCircle } from "react-icons/ai";
 import styles from "./Banner.module.css";
 
 const Banner = () => {
   const [movie, setMovie] = useState({});
 
-  // Helper function to shorten long movie descriptions
   const truncate = (text, maxLength) => {
     return text?.length > maxLength ? text.slice(0, maxLength) + "..." : text;
   };
@@ -21,7 +20,7 @@ const Banner = () => {
         setMovie(
           request.data.results[
             Math.floor(Math.random() * request.data.results.length)
-          ]
+          ],
         );
       } catch (error) {
         console.error("Error fetching banner movie:", error);
@@ -39,7 +38,6 @@ const Banner = () => {
         backgroundPosition: "center center",
       }}
     >
-      {/* Grouping the Title, Buttons, and Description INSIDE contents */}
       <div className={styles.banner_contents}>
         <h1 className={styles.banner_title}>
           {movie?.title || movie?.name || movie?.original_name}
@@ -58,8 +56,6 @@ const Banner = () => {
           {truncate(movie?.overview, 150)}
         </h1>
       </div>
-
-      {/* The fade bottom must be inside the header to overlay correctly */}
       <div className={styles.banner_fadeBottom}></div>
     </header>
   );

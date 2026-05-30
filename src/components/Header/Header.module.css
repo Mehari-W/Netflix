@@ -1,18 +1,21 @@
 /* 1. Main Header Container */
 .header_outer_container {
-  position: fixed; /* 'fixed' lets it float over your movie banner! */
+  position: fixed;
   top: 0;
   width: 100%;
   height: 68px;
   display: flex;
   align-items: center;
-  transition: background-color 0.4s ease-in-out; /* Smooth fade effect */
+  transition: background-color 0.4s ease-in-out;
   z-index: 1000;
-  /* Starts transparent with a slight dark gradient at the top */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 10%,
+    rgba(0, 0, 0, 0)
+  );
 }
 
-/* 2. The Dark Class (Triggered when scrolling) */
 .header_outer_container.dark {
   background-color: #141414;
   background-image: none;
@@ -21,13 +24,12 @@
 /* 3. Inner Container */
 .header_container {
   width: 100%;
-  padding: 0 4%; /* Classic Netflix side padding */
+  padding: 0 4%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* 4. Left Navigation Styles */
 .header_left ul {
   display: flex;
   align-items: center;
@@ -38,7 +40,7 @@
 }
 
 .header_left img {
-  width: 92.5px; /* Exact Netflix logo width */
+  width: 92.5px;
   margin-right: 20px;
   cursor: pointer;
 }
@@ -54,13 +56,11 @@
   color: #b3b3b3;
 }
 
-/* The active page (e.g., Home) is usually bolder and bright white */
 .header_left ul li.active {
   font-weight: bold;
   color: #ffffff;
 }
 
-/* 5. Right Navigation Styles */
 .header_right ul {
   display: flex;
   align-items: center;
@@ -78,7 +78,6 @@
   align-items: center;
 }
 
-/* 6. Profile Avatar & Dropdown Hover Effect */
 .profile_container {
   display: flex;
   align-items: center;
@@ -95,7 +94,6 @@
   transition: transform 0.3s ease; /* Makes the arrow spin */
 }
 
-/* Spin the arrow upside down when hovering over the profile area */
 .header_right ul li.profile_container:hover .dropdown_arrow {
   transform: rotate(180deg);
 }

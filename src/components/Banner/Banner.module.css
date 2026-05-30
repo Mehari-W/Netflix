@@ -2,7 +2,7 @@
   color: white;
   object-fit: contain;
   height: 448px;
-  position: relative; /* Crucial for the fadeBottom to stick to the bottom */
+  position: relative; 
 }
 
 .banner_contents {
@@ -25,7 +25,6 @@
   max-width: 360px;
   height: 80px;
   font-weight: 500;
-  /* Adds a slight text shadow to make white text readable over bright images */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45); 
 }
 
@@ -44,12 +43,12 @@
   padding: 0.5rem 1.5rem;
   display: flex;
   align-items: center;
-  gap: 8px; /* Spaces the icon from the text */
+  gap: 8px; 
   font-size: 1.1rem;
   transition: all 0.2s;
 }
 
-/* Specific style for the primary "Play" button */
+
 .play_button {
   background-color: white;
   color: black;
@@ -59,7 +58,7 @@
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-/* Specific style for the secondary "More Info" button */
+
 .info_button {
   background-color: rgba(109, 109, 110, 0.7);
   color: white;
@@ -69,7 +68,6 @@
   background-color: rgba(109, 109, 110, 0.4);
 }
 
-/* The smooth gradient that blends the banner into the rows below */
 .banner_fadeBottom {
   height: 7.4rem;
   background-image: linear-gradient(

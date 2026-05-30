@@ -9,7 +9,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
   const [trailerUrl, setTrailerUrl] = useState("");
   const base_url = "https://image.tmdb.org/t/p/original";
 
-  // Fetch movie data from TMDB when the component loads
+ 
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -22,22 +22,21 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     fetchData();
   }, [fetchUrl]);
 
-  // Options configuration for the YouTube player
   const opts = {
     height: "390",
     width: "100%",
     playerVars: {
-      autoplay: 1, // Auto-plays the video when it loads
+      autoplay: 1, 
     },
   };
 
-  // Handles clicking a movie poster to fetch/toggle the YouTube trailer
+
   const handleClick = (movie) => {
     if (trailerUrl) {
-      // If a trailer is already open, clicking any movie closes it
+      
       setTrailerUrl("");
     } else {
-      // Look for the movie trailer using its name, title, or original name
+
       movieTrailer(movie?.name || movie?.title || movie?.original_name || "")
         .then((url) => {
           // Extract the video ID from the full YouTube URL
@@ -52,7 +51,6 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     <div className={styles.row}>
       <h2>{title}</h2>
 
-      {/* Container for the horizontally scrolling posters */}
       <div className={styles.row__posters}>
         {movies.map((movie) => (
           <img
@@ -69,7 +67,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
         ))}
       </div>
 
-      {/* Render the YouTube component only if a trailer URL exists */}
+     
       {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
     </div>
   );

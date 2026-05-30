@@ -1,14 +1,14 @@
 .footer_outer_container {
   display: flex;
   justify-content: center;
-  background-color: #141414; /* Netflix standard dark background */
+  background-color: #141414; 
   color: grey;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 .footer_inner_container {
-  width: 70%; /* Keeps the text from stretching too wide on massive screens */
+  width: 70%; 
   max-width: 1000px;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@
 /* CSS Grid is the best way to handle the 4 columns */
 .footer_data {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -63,7 +63,7 @@
 
 .service_code p {
   border: 1px solid grey;
-  display: inline-block; /* Keeps the border tight around the text */
+  display: inline-block; 
   padding: 5px 10px;
   font-size: 13px;
   cursor: pointer;

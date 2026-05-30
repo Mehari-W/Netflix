@@ -42,13 +42,13 @@ const Footer = () => {
             <ul>
               <li>Media Center</li>
               <li>Privacy</li>
-              <li>Ad Choices</li> {/* Added for modern Ad-tier compliance */}
+              <li>Ad Choices</li> 
               <li>Contact Us</li>
             </ul>
           </div>
         </div>
 
-        {/* Service Button & Copyright */}
+    
         <div className={styles.service_code}>
           <p>Service Code</p>
         </div>
