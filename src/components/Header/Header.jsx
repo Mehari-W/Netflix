@@ -55,7 +55,7 @@ const HEADER = () => {
                 src={Netflix_avatar}
                 alt="User Profile"
                 className={styles.profile_icon}
-                style={{ width: "auto", height: "auto", objectFit: "cover" }}
+                style={{ width: "32px", height: "32px", objectFit: "cover" }}
               />
               <IoMdArrowDropdownCircle className={styles.dropdown_arrow} />
             </li>
