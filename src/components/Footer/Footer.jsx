@@ -52,8 +52,12 @@ const Footer = () => {
           <p>Service Code</p>
         </div>
         
+        <div className={styles.disclaimer}>
+          This is a learning project clone. Not affiliated with or endorsed by Netflix, Inc.
+        </div>
+        
         <div className={styles.copy_write}>
-          &copy; 1997-2026 Netflix, Inc. 
+          &copy; 2026 Netflix Clone - Built for educational purposes only
         </div>
         
       </div>
