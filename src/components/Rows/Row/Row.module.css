@@ -48,3 +48,55 @@
 .row__posterLarge:hover {
   transform: scale(1.09);
 }
+
+.row__trailer {
+  margin-top: 10px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    margin-left: 12px;
+  }
+
+  .row h2 {
+    font-size: 1.1rem;
+  }
+
+  .row__posters {
+    padding: 15px 15px 15px 0;
+  }
+
+  .row__poster {
+    max-height: 80px;
+    margin-right: 8px;
+  }
+
+  .row__posterLarge {
+    max-height: 180px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .row {
+    margin-left: 10px;
+  }
+
+  .row h2 {
+    font-size: 1rem;
+  }
+
+  .row__posters {
+    padding: 10px 10px 10px 0;
+  }
+
+  .row__poster {
+    max-height: 65px;
+    margin-right: 6px;
+  }
+
+  .row__posterLarge {
+    max-height: 140px;
+  }
+}

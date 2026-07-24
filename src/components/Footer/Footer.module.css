@@ -86,3 +86,36 @@
     width: 90%;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .footer_inner_container {
+    width: 95%;
+  }
+
+  .footer_icons {
+    gap: 15px;
+    margin-bottom: 12px;
+  }
+
+  .icon_spacing {
+    font-size: 1.2rem;
+  }
+
+  .footer_data {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .footer_data ul li {
+    font-size: 11px;
+  }
+
+  .service_code p {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .copy_write {
+    font-size: 10px;
+  }
+}

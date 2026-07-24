@@ -16,7 +16,6 @@ const Banner = () => {
     const fetchData = async () => {
       try {
         const request = await instance.get(requests.fetchNetflixOriginals);
-        // Grab a random movie from the results array to feature in the banner
         setMovie(
           request.data.results[
             Math.floor(Math.random() * request.data.results.length)
@@ -34,7 +33,7 @@ const Banner = () => {
       className={styles.banner}
       style={{
         backgroundSize: "cover",
-        backgroundImage: `url("https://image.tmdb.org/t/p/original${movie?.backdrop_path}")`,
+        backgroundImage: `url("https://image.tmdb.org/t/p/w1280${movie?.backdrop_path}")`,
         backgroundPosition: "center center",
       }}
     >
